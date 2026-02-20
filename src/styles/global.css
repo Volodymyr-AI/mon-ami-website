@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tenor+Sans&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
+/* ── Paris sketch background pattern ── */
+@keyframes patternDrift {
+  0% {
+    background-position:
+      0 0,
+      40px 40px,
+      80px 80px,
+      20px 20px;
+  }
+  100% {
+    background-position:
+      60px 30px,
+      100px 70px,
+      140px 110px,
+      80px 50px;
+  }
+}
+
 /* ── Design Tokens ── */
 :root {
   /* Palette */
@@ -46,6 +64,21 @@ body {
   background-color: var(--cream);
   color: var(--text-dark);
   font-family: var(--font-body);
+
+  /* ── Paris sketch pattern via SVG data URIs ── */
+  background-image:
+    /* Handwritten "Paris" cursive strokes — top layer scattered */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%23b8986a' stroke-opacity='0.20' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Paris cursive top-left --%3E%3Cpath d='M18 52 C22 44, 30 42, 34 48 C38 54, 36 62, 28 62 C20 62, 16 56, 20 50' stroke-width='1.2'/%3E%3Cpath d='M34 48 L38 68' stroke-width='1.1'/%3E%3Cpath d='M45 42 C45 58, 47 66, 52 66' stroke-width='1.1'/%3E%3Cpath d='M44 54 L56 54' stroke-width='1'/%3E%3Cpath d='M62 42 C58 52, 58 62, 62 66 C66 70, 72 68, 74 62 C76 56, 72 46, 66 44 C60 42, 58 50, 62 54 C66 58, 74 58, 78 54' stroke-width='1.1'/%3E%3Cpath d='M84 42 L84 66 M84 54 L94 42 M94 42 L84 54 L96 66' stroke-width='1.1'/%3E%3Cpath d='M102 42 C102 58, 104 66, 110 64 C116 62, 116 52, 110 50 C104 48, 102 54, 106 58' stroke-width='1.1'/%3E%3C!-- Oh! exclamation --%3E%3Cpath d='M22 88 C18 96, 18 108, 24 114 C30 120, 38 118, 42 110 C46 102, 44 90, 38 86 C32 82, 24 86, 22 94' stroke-width='1'/%3E%3Cpath d='M50 82 L50 108 M50 116 L50 120' stroke-width='1.1'/%3E%3Cpath d='M58 82 L58 108 M58 116 L58 120' stroke-width='1.1'/%3E%3C!-- Eiffel Tower sketch --%3E%3Cpath d='M168 280 L180 180 L192 280 M165 260 L195 260 M163 280 L197 280 M175 210 L185 210 M177 180 L183 170 L183 160' stroke-width='1.2'/%3E%3Cpath d='M175 200 C173 195, 175 185, 180 183 C185 181, 187 190, 185 198' stroke-width='0.9'/%3E%3C!-- Arc de Triomphe sketch --%3E%3Cpath d='M290 340 L290 300 C290 290, 295 284, 305 284 C315 284, 320 290, 320 300 L320 340 M290 340 L320 340' stroke-width='1.2'/%3E%3Cpath d='M296 340 L296 308 C296 302, 299 298, 305 298 C311 298, 314 302, 314 308 L314 340' stroke-width='1'/%3E%3Cpath d='M286 340 L324 340 M286 294 L324 294 M288 318 L322 318' stroke-width='0.9'/%3E%3C!-- Flowing script lines --%3E%3Cpath d='M30 150 C50 145, 80 155, 100 148 C120 141, 140 152, 160 148' stroke-width='0.8' stroke-opacity='0.09'/%3E%3Cpath d='M20 168 C45 162, 75 172, 105 165 C135 158, 155 168, 180 163' stroke-width='0.7' stroke-opacity='0.08'/%3E%3Cpath d='M25 185 C55 179, 85 189, 115 182' stroke-width='0.7' stroke-opacity='0.08'/%3E%3C!-- La Tour Eiffel script --%3E%3Cpath d='M220 95 L240 95 M225 88 L225 105' stroke-width='0.9'/%3E%3Cpath d='M245 88 C241 96, 241 106, 247 106' stroke-width='0.9'/%3E%3Cpath d='M255 88 C251 96, 253 106, 259 104 C265 102, 265 92, 259 90 C253 88, 251 94, 255 98 C259 102, 267 102, 271 98' stroke-width='0.9'/%3E%3Cpath d='M278 88 L278 106 M278 97 L290 88 M290 88 L278 97 L292 106' stroke-width='0.9'/%3E%3Cpath d='M297 88 C297 104, 299 110, 305 108 C311 106, 311 96, 305 94 C299 92, 297 98, 301 102' stroke-width='0.9'/%3E%3C!-- Ink splatter dots --%3E%3Ccircle cx='140' cy='70' r='1.5' fill='%23b8986a' fill-opacity='0.12' stroke='none'/%3E%3Ccircle cx='200' cy='130' r='1' fill='%23b8986a' fill-opacity='0.1' stroke='none'/%3E%3Ccircle cx='350' cy='80' r='2' fill='%23b8986a' fill-opacity='0.08' stroke='none'/%3E%3Ccircle cx='380' cy='200' r='1.2' fill='%23b8986a' fill-opacity='0.1' stroke='none'/%3E%3Ccircle cx='60' cy='310' r='1.8' fill='%23b8986a' fill-opacity='0.09' stroke='none'/%3E%3C!-- Notre Dame sketch hints --%3E%3Cpath d='M340 200 L340 160 L380 160 L380 200 M340 200 L380 200' stroke-width='1.1'/%3E%3Cpath d='M346 200 L346 168 L374 168 L374 200' stroke-width='0.9'/%3E%3Cpath d='M355 168 C355 160, 360 156, 365 156 C370 156, 374 160, 374 168' stroke-width='1'/%3E%3Cpath d='M355 180 C355 174, 358 170, 362 170 C366 170, 369 174, 369 180' stroke-width='0.9'/%3E%3Cpath d='M352 168 L348 160 M368 168 L364 156 M376 168 L380 158' stroke-width='0.8'/%3E%3C!-- More flowing text lines bottom area --%3E%3Cpath d='M50 370 C80 364, 120 374, 150 367 C180 360, 210 370, 240 365' stroke-width='0.75' stroke-opacity='0.08'/%3E%3Cpath d='M40 388 C75 382, 115 392, 150 385 C185 378, 220 388, 255 382' stroke-width='0.7' stroke-opacity='0.07'/%3E%3C!-- Small crown/fleur detail --%3E%3Cpath d='M200 35 L200 55 M193 30 C193 38, 197 42, 200 40 C203 38, 207 34, 207 30 M200 40 C200 48, 200 55, 200 55' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),
+    /* Secondary layer — offset, different elements */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='380' viewBox='0 0 380 380'%3E%3Cg fill='none' stroke='%237a6840' stroke-opacity='0.20' stroke-linecap='round'%3E%3C!-- Scattered cursive words --%3E%3Cpath d='M200 60 C196 68, 196 78, 202 82 C208 86, 214 82, 216 74 C218 66, 214 56, 208 54 C202 52, 198 58, 200 64' stroke-width='1'/%3E%3Cpath d='M222 52 L222 82' stroke-width='1'/%3E%3Cpath d='M228 52 C228 68, 230 76, 236 76' stroke-width='1'/%3E%3Cpath d='M242 52 C238 62, 238 74, 244 76 C250 78, 256 74, 258 66 C260 58, 256 48, 250 48 C244 48, 240 54, 242 58' stroke-width='1'/%3E%3Cpath d='M264 48 L264 76 M264 62 L276 76 M264 62 L276 48' stroke-width='1'/%3E%3C!-- French decorative border fragments --%3E%3Cpath d='M10 10 C15 5, 25 5, 30 10 C35 15, 35 25, 30 30' stroke-width='0.9'/%3E%3Cpath d='M350 10 C345 5, 335 5, 330 10 C325 15, 325 25, 330 30' stroke-width='0.9'/%3E%3Cpath d='M10 370 C15 375, 25 375, 30 370 C35 365, 35 355, 30 350' stroke-width='0.9'/%3E%3C!-- Horizontal script lines --%3E%3Cpath d='M10 120 C40 114, 70 124, 100 117 C130 110, 155 120, 180 115 C205 110, 230 120, 260 116' stroke-width='0.65' stroke-opacity='0.07'/%3E%3Cpath d='M10 138 C45 132, 80 142, 115 135 C150 128, 180 138, 210 133' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cpath d='M10 156 C35 150, 65 158, 95 153 C125 148, 150 156, 175 152' stroke-width='0.6' stroke-opacity='0.06'/%3E%3C!-- Macaron simple outline sketch --%3E%3Cpath d='M290 130 C274 130, 262 122, 262 112 C262 102, 274 94, 290 94 C306 94, 318 102, 318 112 C318 118, 310 124, 298 127' stroke-width='1.1'/%3E%3Cpath d='M260 112 L320 112' stroke-width='0.8'/%3E%3Cpath d='M262 116 C262 126, 274 134, 290 134 C306 134, 318 126, 318 116' stroke-width='1.1'/%3E%3C!-- Small floral/leaf accent --%3E%3Cpath d='M50 230 C50 220, 55 215, 60 218 C65 221, 65 230, 60 235 C55 240, 50 238, 50 230 Z' stroke-width='0.9'/%3E%3Cpath d='M60 230 L72 225' stroke-width='0.8'/%3E%3Cpath d='M55 225 C58 218, 66 216, 70 220' stroke-width='0.8'/%3E%3C!-- Stars/sparkles --%3E%3Cpath d='M160 280 L160 290 M155 285 L165 285 M156 281 L164 289 M156 289 L164 281' stroke-width='0.8'/%3E%3Cpath d='M320 250 L320 258 M316 254 L324 254 M317 251 L323 257 M317 257 L323 251' stroke-width='0.7'/%3E%3C!-- Flowing lines bottom --%3E%3Cpath d='M10 320 C50 314, 90 322, 130 317 C170 312, 200 320, 240 316' stroke-width='0.6' stroke-opacity='0.07'/%3E%3Cpath d='M10 338 C55 332, 100 340, 145 335 C190 330, 230 338, 275 334' stroke-width='0.55' stroke-opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-size:
+    420px 420px,
+    380px 380px;
+  background-position:
+    0 0,
+    40px 40px;
+  background-repeat: repeat;
 }
 
 /* ── Links ── */
