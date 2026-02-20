@@ -29,7 +29,7 @@ const FLOATING = [
     src: matcha,
     label: 'Матча',
     size: 'md',
-    pos: { right: '7%', top: '20%' },
+    pos: { right: '7%', top: '25%' },
     anim: 'normal',
     rotateInit: 10,
     depth: 0.8,
@@ -56,7 +56,7 @@ const FLOATING = [
     src: coconut,
     label: 'Кокос',
     size: 'sm',
-    pos: { right: '19%', top: '62%' },
+    pos: { right: '19%', top: '72%' },
     anim: 'normal',
     rotateInit: -8,
     depth: 0.5,
@@ -65,7 +65,7 @@ const FLOATING = [
     src: matcha,
     label: 'Матча',
     size: 'xs',
-    pos: { left: '22%', top: '28%' },
+    pos: { left: '18%', top: '35%' },
     anim: 'fast',
     rotateInit: 18,
     depth: 0.4,
@@ -73,10 +73,10 @@ const FLOATING = [
 ];
 
 const SIZE_MAP: Record<string, number> = {
-  xs: 72,
-  sm: 100,
-  md: 130,
-  lg: 165,
+  xs: 142,
+  sm: 180,
+  md: 200,
+  lg: 225,
 };
 
 export default function HomePage() {

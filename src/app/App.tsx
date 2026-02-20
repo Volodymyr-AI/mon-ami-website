@@ -1,4 +1,4 @@
-import '../styles/App.css';
+import '../styles/global.css';
 
 import { MainLayout } from '../shared/layout/MainLayout';
 import HomePage from '../pages/HomePage';

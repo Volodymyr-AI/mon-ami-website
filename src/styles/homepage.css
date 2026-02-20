@@ -80,7 +80,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
   z-index: 4;
   transform: rotate(var(--rot, 0deg));
   will-change: transform;
@@ -159,30 +158,12 @@
 /* Французькі макарони*/
 .hero-label {
   font-family: 'Tenor Sans', Georgia, serif;
-  font-size: clamp(2rem, 0.75vw, 0.9rem); /* трохи більше */
+  font-size: clamp(2rem, 0.75vw, 0.9rem);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #b8986a;
   margin: 0 0 0.7em;
-}
-
-/* Mon Ami */
-.hero-headline {
-  font-family: 'Tenor Sans', Georgia, serif;
-  font-size: clamp(1.8rem, 8vw, 9.5rem);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #2c2416;
-  margin: 0 0 0.1em;
-  padding: 0;
-  line-height: 0.9;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0 0.1em;
-  perspective: 600px;
-  -webkit-text-stroke: 0.7px #2c2416;
 }
 
 .hero-char {
