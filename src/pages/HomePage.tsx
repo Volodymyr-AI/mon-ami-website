@@ -1,35 +1,86 @@
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown } from 'lucide-react';
+
+import gsap from 'gsap';
+
 import '@/styles/homepage.css';
 
-import lavender from '@/assets/images/macaron/4/54.png';
-import rasberry from '@/assets/images/macaron/11/67.png';
-import matcha from '@/assets/images/macaron/16/72.png';
-import vanilla from '@/assets/images/macaron/5/44.png';
-import rose from '@/assets/images/macaron/17/73.png';
+import salt from '@/assets/images/macaron/1/40.png';
 import coconut from '@/assets/images/macaron/2/52.png';
+import cinnamon from '@/assets/images/macaron/3/42.png';
+import lavender from '@/assets/images/macaron/4/54.png';
+import vanilla from '@/assets/images/macaron/5/44.png';
+import greeen_tea from '@/assets/images/macaron/6/46.png';
+import coffee from '@/assets/images/macaron/8/48.png';
+import cream from '@/assets/images/macaron/9/65.png';
+import banana from '@/assets/images/macaron/10/66.png';
+import rasberry from '@/assets/images/macaron/11/67.png';
+import cacao from '@/assets/images/macaron/12/68.png';
+import orange from '@/assets/images/macaron/13/69.png';
+import dark_chocolate from '@/assets/images/macaron/14/70.png';
+import rassberry_chocolate from '@/assets/images/macaron/15/71.png';
+import pistacho_rassberry from '@/assets/images/macaron/16/72.png';
+import rose from '@/assets/images/macaron/17/73.png';
+import blueberry from '@/assets/images/macaron/18/74.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HERO_MACARON = lavender;
 
 const FLOATING = [
+  //md
   {
-    src: rasberry,
-    label: 'Малина',
-    size: 'lg',
-    pos: { left: '6%', top: '18%' },
+    src: blueberry,
+    label: 'Лохина',
+    size: 'md',
+    pos: { left: '5%', top: '45%' },
     anim: 'slow',
     rotateInit: -12,
     depth: 1,
   },
   {
-    src: matcha,
-    label: 'Матча',
+    src: dark_chocolate,
+    label: 'Бельгійський шоколад',
     size: 'md',
-    pos: { right: '7%', top: '25%' },
+    pos: { right: '40%', bottom: '12%' },
+    anim: 'slow',
+    rotateInit: -12,
+    depth: 1,
+  },
+  {
+    src: cinnamon,
+    label: 'Цейлонська кориця',
+    size: 'md',
+    pos: { right: '5%', bottom: '44%' },
+    anim: 'slow',
+    rotateInit: -12,
+    depth: 1,
+  },
+  {
+    src: rassberry_chocolate,
+    label: 'Малина-шоколад',
+    size: 'md',
+    pos: { left: '42%', top: '20%' },
+    anim: 'slow',
+    rotateInit: -12,
+    depth: 1,
+  },
+  // sm size
+  {
+    src: rasberry,
+    label: 'Малина',
+    size: 'sm',
+    pos: { left: '16%', top: '18%' },
+    anim: 'slow',
+    rotateInit: -12,
+    depth: 1,
+  },
+  {
+    src: pistacho_rassberry,
+    label: 'Фісташка-малина',
+    size: 'sm',
+    pos: { right: '15%', top: '24%' },
     anim: 'normal',
     rotateInit: 10,
     depth: 0.8,
@@ -46,36 +97,56 @@ const FLOATING = [
   {
     src: rose,
     label: 'Троянда',
-    size: 'md',
-    pos: { right: '6%', bottom: '24%' },
+    size: 'sm',
+    pos: { right: '15%', bottom: '24%' },
     anim: 'slow',
     rotateInit: 14,
     depth: 0.9,
   },
+  // xxs size
   {
     src: coconut,
     label: 'Кокос',
-    size: 'sm',
-    pos: { right: '19%', top: '72%' },
+    size: 'xxs',
+    pos: { right: '60%', top: '55%' },
     anim: 'normal',
     rotateInit: -8,
     depth: 0.5,
   },
   {
-    src: matcha,
-    label: 'Матча',
-    size: 'xs',
-    pos: { left: '18%', top: '35%' },
+    src: greeen_tea,
+    label: 'Зелений чай',
+    size: 'xxs',
+    pos: { left: '27%', top: '32%' },
     anim: 'fast',
     rotateInit: 18,
     depth: 0.4,
   },
+  {
+    src: orange,
+    label: 'Апельсин',
+    size: 'xxs',
+    pos: { right: '28%', top: '56%' },
+    anim: 'normal',
+    rotateInit: 18,
+    depth: 0.4,
+  },
+  {
+    src: salt,
+    label: 'Fleur de Sel',
+    size: 'xxs',
+    pos: { right: '29%', top: '33%' },
+    anim: 'slow',
+    rotateInit: -12,
+    depth: 1,
+  },
 ];
 
 const SIZE_MAP: Record<string, number> = {
+  xxs: 110,
   xs: 142,
-  sm: 180,
-  md: 200,
+  sm: 150,
+  md: 170,
   lg: 225,
 };
 
@@ -275,8 +346,8 @@ export default function HomePage() {
     const handleMouse = (e: MouseEvent) => {
       const { innerWidth: W, innerHeight: H } = window;
       mouseRef.current = {
-        x: (e.clientX / W - 0.5) * 2, // -1 → +1
-        y: (e.clientY / H - 0.5) * 2,
+        x: (e.clientX / W - 0.5) * 4, // -1 → +1
+        y: (e.clientY / H - 0.5) * 4,
       };
       const { x, y } = mouseRef.current;
 
@@ -374,7 +445,9 @@ export default function HomePage() {
         src={HERO_MACARON}
         alt="Mon Ami Macaron"
         className="hero-main-img"
-        style={{ perspective: '600px' }}
+        width={120}
+        height={120}
+        style={{ perspective: '400px', width: '270px', height: '250px' }}
       />
 
       {/* ── Text content ── */}
