@@ -467,7 +467,7 @@ export default function HomePage() {
 
       {/* ── Scroll arrow ── */}
       <div ref={arrowRef} className="hero-arrow" onClick={scrollDown}>
-        <span className="hero-arrow-label">Гортайте вниз</span>
+        <span className="hero-arrow-label">Гортай вниз</span>
         <ChevronDown size={20} className="hero-arrow-icon" />
       </div>
     </section>
