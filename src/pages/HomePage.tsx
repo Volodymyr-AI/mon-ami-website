@@ -453,7 +453,7 @@ export default function HomePage() {
       {/* ── Text content ── */}
       <div className="hero-content">
         <p ref={labelRef} className="hero-label">
-          Французькі Макарони
+          Французькі Macarón
         </p>
 
         <p ref={subRef} className="hero-sub">

@@ -6,7 +6,7 @@
   background-color: var(--cream);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   box-shadow: 0 1px 16px rgba(138, 110, 60, 0.07);
 }
 

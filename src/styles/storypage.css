@@ -1,0 +1,386 @@
+/* ════════════════════════════════════════════
+   storypage.css  —  Mon Ami · Наша Історія
+   ════════════════════════════════════════════ */
+
+.story-section {
+  position: relative;
+  background-color: #faf7f2;
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  z-index: 101;
+  overflow: hidden;
+}
+
+/* ── Subtle top divider ── */
+.story-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #b8986a 30%,
+    #b8986a 70%,
+    transparent 100%
+  );
+  opacity: 0.45;
+}
+
+/* ── Container ── */
+.story-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 5rem);
+}
+
+/* ── Section header (eyebrow label) ── */
+.story-eyebrow {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.6rem, 0.65vw, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b8986a;
+  margin-bottom: 0.6em;
+}
+
+/* ── Main grid ── */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+  margin-bottom: clamp(4rem, 7vh, 6rem);
+}
+
+/* ════════════════ IMAGE COLUMN ════════════════ */
+.story-image-col {
+  position: relative;
+}
+
+.story-image-frame {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(44, 36, 22, 0.14),
+    0 4px 18px rgba(44, 36, 22, 0.08),
+    0 0 0 1px rgba(184, 152, 106, 0.18);
+}
+
+.story-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.story-image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.story-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(44, 36, 22, 0.22) 0%,
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+/* ── Decorative circles ── */
+.story-deco-circle-lg {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: clamp(80px, 8vw, 130px);
+  height: clamp(80px, 8vw, 130px);
+  border-radius: 50%;
+  background: rgba(184, 152, 106, 0.1);
+  border: 1px solid rgba(184, 152, 106, 0.2);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.story-deco-circle-sm {
+  position: absolute;
+  top: -1.2rem;
+  left: -1.2rem;
+  width: clamp(48px, 4.5vw, 72px);
+  height: clamp(48px, 4.5vw, 72px);
+  border-radius: 50%;
+  background: rgba(220, 195, 220, 0.14);
+  border: 1px solid rgba(184, 152, 106, 0.15);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Experience badge ── */
+.story-badge {
+  position: absolute;
+  bottom: clamp(1.5rem, 3vh, 2.5rem);
+  left: clamp(-1rem, -2vw, -1.5rem);
+  background: #faf7f2;
+  border: 1px solid rgba(184, 152, 106, 0.35);
+  padding: clamp(0.8rem, 1.2vw, 1.2rem) clamp(1.2rem, 1.8vw, 1.8rem);
+  box-shadow: 0 8px 30px rgba(44, 36, 22, 0.1);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.story-badge-num {
+  font-family: 'Cormorant', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 2.8vw, 3.2rem);
+  font-weight: 600;
+  color: #b8986a;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.story-badge-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.6rem, 0.62vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a7d68;
+}
+
+/* ════════════════ CONTENT COLUMN ════════════════ */
+.story-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.story-title {
+  font-family: 'Tenor Sans', Georgia, serif;
+  font-size: clamp(1.6rem, 2.4vw, 3rem);
+  font-weight: 400;
+  color: #2c2416;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin: 0 0 clamp(1.2rem, 2.2vh, 2rem);
+}
+
+.story-title em {
+  font-style: italic;
+  color: #b8986a;
+  font-family: 'Cormorant', Georgia, serif;
+}
+
+.story-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.9rem, 1.5vh, 1.3rem);
+  margin-bottom: clamp(1.8rem, 3.5vh, 2.8rem);
+}
+
+.story-text-block p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.78rem, 0.88vw, 1rem);
+  font-weight: 400;
+  line-height: 1.78;
+  color: #8a7d68;
+  margin: 0;
+}
+
+/* ── Values row ── */
+.story-values {
+  display: flex;
+  gap: clamp(1.2rem, 2vw, 2rem);
+  margin-bottom: clamp(2rem, 3.5vh, 2.8rem);
+  flex-wrap: wrap;
+}
+
+.story-value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: center;
+  flex: 1;
+  min-width: 80px;
+}
+
+.story-value-icon {
+  width: clamp(38px, 3.2vw, 52px);
+  height: clamp(38px, 3.2vw, 52px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(184, 152, 106, 0.25);
+  background: rgba(184, 152, 106, 0.06);
+  color: #b8986a;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    transform 0.25s;
+}
+
+.story-value-item:hover .story-value-icon {
+  background: rgba(184, 152, 106, 0.14);
+  border-color: rgba(184, 152, 106, 0.5);
+  transform: translateY(-2px);
+}
+
+.story-value-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.6rem, 0.62vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2c2416;
+}
+
+/* ── CTA ── */
+.story-cta {
+  align-self: flex-start;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(0.6rem, 0.65vw, 0.78rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase;
+  color: #2c2416 !important;
+  background: transparent !important;
+  border: 1px solid #b8986a !important;
+  padding: 0.85em 2.2em !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.35s ease !important;
+  isolation: isolate;
+}
+
+.story-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #b8986a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
+  z-index: -1;
+}
+
+.story-cta:hover {
+  color: #faf7f2 !important;
+}
+.story-cta:hover::before {
+  transform: scaleX(1);
+}
+
+/* ════════════════ STATS ROW ════════════════ */
+.story-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  padding-top: clamp(2rem, 4vh, 3.5rem);
+  border-top: 1px solid rgba(184, 152, 106, 0.2);
+}
+
+.story-stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.story-stat-num {
+  font-family: 'Cormorant', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 3.2vw, 4rem);
+  font-weight: 600;
+  color: #b8986a;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.story-stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.58rem, 0.6vw, 0.7rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a7d68;
+}
+
+/* ── Ornament ── */
+.story-ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: clamp(2.5rem, 5vh, 4rem) auto 0;
+  max-width: 320px;
+}
+
+.story-ornament-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 152, 106, 0.5));
+}
+
+.story-ornament-line:last-child {
+  background: linear-gradient(90deg, rgba(184, 152, 106, 0.5), transparent);
+}
+
+.story-ornament-diamond {
+  width: 6px;
+  height: 6px;
+  background: #b8986a;
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .story-image-col {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .story-image-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .story-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .story-badge {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .story-values {
+    justify-content: space-around;
+  }
+
+  .story-cta {
+    align-self: stretch;
+    text-align: center;
+  }
+}
