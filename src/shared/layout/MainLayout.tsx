@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import { Header } from './Header';
 
 interface MainLayoutProps {
@@ -9,6 +10,7 @@ export function MainLayout({ children }: MainLayoutProps) {
     <>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 }

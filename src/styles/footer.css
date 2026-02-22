@@ -1,0 +1,401 @@
+/* ════════════════════════════════════════════
+   Footer.css  —  Mon Ami Macarons
+   Layout inspired by empathic.com.ua
+   ════════════════════════════════════════════ */
+
+.footer {
+  position: relative;
+  background-color: #181208;
+  color: #c8b99a;
+  overflow: hidden;
+  max-height: 700px;
+  z-index: 1000;
+}
+
+/* ── Top gold line ── */
+.footer-top-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(184, 152, 106, 0.55) 20%,
+    rgba(184, 152, 106, 1) 50%,
+    rgba(184, 152, 106, 0.55) 80%,
+    transparent 100%footer-marquee-set
+  );
+}
+
+/* ── Outer wrapper ── */
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vh, 4.5rem) clamp(1.5rem, 4vw, 5rem);
+}
+
+/* ════════════ MAIN 2-COL GRID ════════════ */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 10rem);
+  align-items: start;
+}
+
+/* ── Shared tiny label ── */
+.footer-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.52rem, 0.55vw, 0.65rem);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(184, 152, 106, 0.55);
+  margin: 0 0 0.4rem;
+  display: block;
+}
+
+/* ════ LEFT COLUMN ════ */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.4rem, 2.8vh, 2rem);
+}
+
+.footer-address p,
+.footer-hours p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.72rem, 0.8vw, 0.92rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(210, 196, 168, 0.8);
+  margin: 0 0 0.5rem;
+}
+
+.footer-address p strong {
+  font-weight: 600;
+  color: #d4c4a8;
+}
+
+/* Payment badges */
+.footer-payment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(184, 152, 106, 0.22);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(210, 196, 168, 0.65);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.56rem, 0.58vw, 0.68rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition:
+    border-color 0.22s,
+    background 0.22s,
+    color 0.22s;
+  cursor: default;
+}
+
+.footer-payment-badge:hover {
+  border-color: rgba(184, 152, 106, 0.5);
+  background: #f2ede4;
+}
+
+/* Payment logo images */
+.footer-pay-img {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0.85) saturate(0.75);
+  transition: filter 0.22s;
+}
+
+.footer-payment-badge:hover .footer-pay-img {
+  filter: brightness(1) saturate(1);
+}
+
+.footer-payment-badge:hover .footer-pay-img--liqpay {
+  filter: brightness(0) invert(1) opacity(0.9);
+}
+
+/* ════ RIGHT COLUMN ════ */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.4rem, 2.8vh, 2rem);
+}
+
+/* Big phone */
+.footer-phone-number {
+  font-family: 'Cormorant', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 5rem);
+  font-weight: 600;
+  color: #d4c4a8;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  display: block;
+  transition: color 0.25s;
+}
+
+.footer-phone-number:hover {
+  color: #b8986a;
+}
+
+.footer-socials-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-social-btn {
+  width: clamp(60px, 2.4vw, 42px);
+  height: clamp(60px, 2.4vw, 42px);
+  border-radius: 50%;
+  border: 1px solid rgba(184, 152, 106, 0.28);
+  background: transparent;
+  color: rgba(184, 152, 106, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    background 0.22s,
+    border-color 0.22s,
+    color 0.22s,
+    transform 0.18s;
+}
+
+.footer-social-btn svg {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-social-btn:hover {
+  background: rgba(184, 152, 106, 0.12);
+  border-color: rgba(184, 152, 106, 0.6);
+  color: #b8986a;
+  transform: translateY(-2px);
+}
+
+/* Email */
+.footer-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 0.75vw, 0.88rem);
+  font-weight: 400;
+  color: rgba(200, 185, 154, 0.6);
+  text-decoration: none;
+  transition: color 0.22s;
+}
+
+.footer-email-link:hover {
+  color: #b8986a;
+}
+
+.footer-email-link svg {
+  width: 13px;
+  height: 13px;
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+/* ════════════ BOTTOM BAR ════════════ */
+.footer-divider {
+  height: 1px;
+  background: rgba(184, 152, 106, 0.1);
+  margin: clamp(1.5rem, 3vh, 2.5rem) 0;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.56rem, 0.58vw, 0.68rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(200, 185, 154, 0.32);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: clamp(1.2rem, 2.5vw, 2.8rem);
+}
+
+.footer-bottom-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.56rem, 0.58vw, 0.68rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(200, 185, 154, 0.32);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+  color: rgba(184, 152, 106, 0.7);
+}
+
+/* ════════════ SCROLL TO TOP ════════════ */
+.footer-scroll-top {
+  position: absolute;
+  bottom: clamp(27.5rem, 3vw, 2.5rem);
+  right: clamp(30rem, 3vw, 2.5rem);
+  width: clamp(100px, 3vw, 52px);
+  height: clamp(100px, 3vw, 52px);
+  border-radius: 50%;
+  border: 1px solid rgba(184, 152, 106, 0.4);
+  background: rgba(24, 18, 8, 0.85);
+  backdrop-filter: blur(8px);
+  color: rgba(184, 152, 106, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.22s,
+    border-color 0.22s,
+    color 0.22s,
+    transform 0.2s,
+    opacity 0.3s;
+  z-index: 200;
+}
+
+.footer-scroll-top:hover {
+  background: rgba(184, 152, 106, 0.15);
+  border-color: rgba(184, 152, 106, 0.7);
+  color: #b8986a;
+  transform: translateY(-3px);
+}
+
+.footer-scroll-top svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* ════════════ MARQUEE BAND ════════════ */
+.footer-marquee-wrap {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1rem, 1.8vh, 1.6rem) 0 clamp(0.5rem, 1vh, 0.8rem);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+/* Track contains 2 identical sets → seamless loop */
+.footer-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeSroll 22s linear infinite;
+  will-change: transform;
+}
+
+.footer-marquee-track:hover {
+  animation-play-state: paused;
+  cursor: default;
+}
+
+@keyframes marqueeSroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.footer-marquee-set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.footer-marquee-word {
+  font-family: 'Tenor Sans', 'Cormorant', Georgia, serif;
+  font-size: clamp(5rem, 4vw, 11.5rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(184, 152, 106, 0.16);
+  user-select: none;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0 clamp(1.5rem, 3vw, 3.5rem);
+}
+
+.footer-marquee-dot {
+  font-family: 'Tenor Sans', Georgia, serif;
+  font-size: clamp(1rem, 1.8vw, 2.2rem);
+  color: rgba(184, 152, 106, 0.2);
+  user-select: none;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-phone-number {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    gap: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-marquee-word {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+  }
+}
